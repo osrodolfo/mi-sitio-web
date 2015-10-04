@@ -1,11 +1,12 @@
 <div>
-        <h1><a href="/">Django Girls Blog</a></h1>
+        <center><h1><a href="/">Mi Blog Usando Django</a></h1></center>
     </div>
 
     {% for post in publicaciones %}
         <div>
             <h1><a href="">{{ post.titulo }}</a></h1>
             <p>{{ post.texto|linebreaks }}</p>
-            <p>publicado: {{ post.fecha_publicacion }}</p>
+            <p>Publicado: {{ post.fecha_publicacion }}</p>
+            <p>Autor: {{ post.autor }}</p>
         </div>
     {% endfor %}
