@@ -1,6 +1,6 @@
-from django.conf.urls import urls
+from django.conf.urls import include, url
 from . import views
 
 urlpatterns = [
-    url(r'^s', views.listar_publicaciones ),
+    url(r'^$', views.listar_publicaciones ),
 ]
