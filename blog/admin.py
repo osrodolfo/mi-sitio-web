@@ -2,4 +2,4 @@
 from django.contrib import admin
 from .models import Postear
 
-admin.sitio.register(Postear)
+admin.site.register(Postear)
