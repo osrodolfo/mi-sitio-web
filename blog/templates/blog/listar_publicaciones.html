@@ -1,12 +1,13 @@
-<div>
-        <center><h1><a href="/">Mi Blog Usando Django</a></h1></center>
-    </div>
+ {% extends "blog/base.html" %}
 
+{% block content %}
     {% for post in publicaciones %}
-        <div>
-            <h1><a href="">{{ post.titulo }}</a></h1>
+    <div class="post">
+      <div class="date">
+        {{ post.fecha_publicacion }}
+      </div>
+            <h1><a href="{% url "blog.views.detalle_publicar" pk=post.pk %}">{{ post.titulo }}</a></h1>
             <p>{{ post.texto|linebreaks }}</p>
-            <p>Publicado: {{ post.fecha_publicacion }}</p>
-            <p>Autor: {{ post.autor }}</p>
-        </div>
+      </div>
     {% endfor %}
+{% endblock content %}
